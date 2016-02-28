@@ -42,3 +42,20 @@ Other points of contention are case-insensitivity, treating quotes as regular ch
   ```
 
   (**TODO:** Include justification.)
+
+- Use `::` to make comments, not `rem`. When you're writing code inside parentheses, like this:
+
+  ```cmd
+  if exist "%file%" (
+      %= use this hack to make comments =%
+      %= unfortunately it doesn't have as good editor support =%
+  )
+  ```
+  
+  Also use `%=` when you want to make a comment on the same line as a piece of code. For example:
+  
+  ```cmd
+  echo blah rem this will echo too
+  echo foo :: this comment will also be displayed
+  echo baz %= this won't be displayed =%
+  ```
