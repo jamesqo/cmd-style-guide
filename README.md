@@ -29,3 +29,16 @@ Other points of contention are case-insensitivity, treating quotes as regular ch
   :set_file_contents
   set "FileContents=..."
   ```
+
+- When using `set`, always surround the variable and its contents with quotes. For example:
+
+  ```cmd
+  :: good
+  set "foo=bar"
+  
+  :: bad
+  set foo=bar
+  set foo="bar"
+  ```
+
+  (**TODO:** Include justification.)
