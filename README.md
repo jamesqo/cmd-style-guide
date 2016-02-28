@@ -59,3 +59,5 @@ Other points of contention are case-insensitivity, treating quotes as regular ch
   echo foo :: this comment will also be displayed
   echo baz %= this won't be displayed =%
   ```
+
+- Dilemma: Should `not ==` or `neq` be used for inequality checking?
