@@ -18,27 +18,27 @@ Other points of contention are case-insensitivity, treating quotes as regular ch
 
 ## Content
 
-- Variable names and label names should be camelCase. For example:
+- Variable names and label names should be PascalCase. For example:
 
   ```cmd
   :: good
-  :setFileContents
-  set "fileContents=..."
+  :SetFileContents
+  set "FileContents=..."
   
   :: bad
   :set_file_contents
-  set "FileContents=..."
+  set "fileContents=..."
   ```
 
 - When using `set`, always surround the variable and its contents with quotes. For example:
 
   ```cmd
   :: good
-  set "foo=bar"
+  set "Foo=bar"
   
   :: bad
-  set foo=bar
-  set foo="bar"
+  set Foo=bar
+  set Foo="bar"
   ```
 
   (**TODO:** Include justification.)
@@ -46,7 +46,7 @@ Other points of contention are case-insensitivity, treating quotes as regular ch
 - Use `::` to make comments, not `rem`. When you're writing code inside parentheses, like this:
 
   ```cmd
-  if exist "%file%" (
+  if exist "%File%" (
       %= use this hack to make comments =%
       %= unfortunately it doesn't have as good editor support =%
   )
@@ -61,3 +61,5 @@ Other points of contention are case-insensitivity, treating quotes as regular ch
   ```
 
 - Dilemma: Should `not ==` or `neq` be used for inequality checking?
+
+- Loop variables should be lowercase like `%%p`, not `%%P`.
